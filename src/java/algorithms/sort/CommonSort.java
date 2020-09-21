@@ -11,8 +11,8 @@ public class CommonSort {
      * 插入排序
      */
     public static void insertSort(int[] target){
-        int len = target.length;
-        if(len <= 1) return ;
+        int len;
+        if(target == null || (len =  target.length) <= 1) return ;
         for (int i = 1; i < len; i++) {
             int val = target[i];
             int j = i - 1;
@@ -31,8 +31,8 @@ public class CommonSort {
     }
 
     public static void bubbleSort(int[] target){
-        int len = target.length;
-        if(len <=1){
+        int len ;
+        if(target == null ||  (len = target.length) <= 1){
             return ;
         }
         for (int i = 0; i < len; i++) {
@@ -57,7 +57,7 @@ public class CommonSort {
         int [] A = {6,4,5,1,2,3};
         Arrays.stream(A).forEach(e -> System.out.println(e));
         System.out.println("---排序后数组---");
-        insertSort(A);
+        bubbleSort(A);
         Arrays.stream(A).forEach(e -> System.out.println(e));
     }
 
